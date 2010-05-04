@@ -1,0 +1,4 @@
+Generates a standalone Scribe client jar for Java.
+
+Usage: ./build.sh
+
