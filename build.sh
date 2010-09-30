@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=0.1.1-thrift-0.5.0-rc0
+VERSION=0.1.1-thrift-0.5.0-rc1
 
 rm -rf gen-java
 
@@ -10,7 +10,7 @@ thrift --gen java src/main/thrift/scribe.thrift
 rm -rf target
 mkdir target
 
-javac -classpath lib/libthrift-0.5.0-rc0.jar:lib/slf4j-api-1.5.8.jar -d target `find gen-java -name \*.java -print`
+javac -classpath lib/libthrift-0.5.0-rc1.jar:lib/slf4j-api-1.5.8.jar -d target `find gen-java -name \*.java -print`
 
 cd target
 jar cvf ../scribe_client-$VERSION.jar *
